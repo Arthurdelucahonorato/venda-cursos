@@ -1,4 +1,5 @@
 import { Usuario } from './Usuario';
+import { Curso } from './Cursos';
 
 export class Professor extends Usuario {
     informacoes: string;
@@ -12,12 +13,19 @@ export class Professor extends Usuario {
         this.assinatura = assinatura;
     }
 
-    comprarCurso(): void {
-        console.log(`${this.nome} está comprando um curso.`);
+    // O professor pode visualizar o curso
+    visualizarCurso(curso: Curso): void {
+        console.log(`${this.nome} está visualizando o curso: ${curso.descricao}`);
     }
 
-    visualizarCurso(): void {
-        console.log(`${this.nome} está visualizando um curso.`);
+    // O professor pode comprar o curso
+    comprarCurso(curso: Curso): void {
+        if (this.saldo >= 100) { // Suposição: Preço do curso é 100
+            this.saldo -= 100;
+            console.log(`${this.nome} comprou o curso: ${curso.descricao}`);
+        } else {
+            console.log(`${this.nome} não tem saldo suficiente para comprar o curso: ${curso.descricao}`);
+        }
     }
 
     cadastrarCurso(): void {
