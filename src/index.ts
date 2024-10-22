@@ -4,7 +4,7 @@ import { Curso } from './classes/Cursos';
 import { Video } from './classes/Video';
 import { Material } from './classes/Material';
 
-const novoCurso = new Curso(
+/*const novoCurso = new Curso(
     'Curso de TypeScript',
     'Aprenda a programar em TypeScript do básico ao avançado',
     5 // Avaliação (nota)
@@ -25,6 +25,8 @@ novoCurso.cadastrarVideo(video1);
 novoCurso.cadastrarMaterial(material1)
 novoCurso.cadastrarMaterial(material2)
 
-
 console.log('Vídeos do curso:', novoCurso.listarVideos());
 console.log('Materiais do curso:', novoCurso.listarMateriais());
+console.log('--------')
+novoCurso.excluirMaterial('Artigo sobre o TypeScript')
+console.log('Materiais do curso:', novoCurso.listarMateriais());*/

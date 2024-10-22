@@ -1,5 +1,7 @@
 import { Usuario } from './Usuario';
 import { Curso } from './Cursos';
+import { Video } from './Video';
+import { Material } from './Material';
 
 export class Professor extends Usuario {
     informacoes: string;
@@ -28,11 +30,22 @@ export class Professor extends Usuario {
         }
     }
 
-    cadastrarCurso(): void {
-        console.log(`${this.nome} está cadastrando um novo curso.`);
+    // O professor pode cadastrar um novo curso
+    cadastrarCurso(descricao: string, conteudo: string, avaliacao: number): Curso {
+        const novoCurso = new Curso(descricao, conteudo, avaliacao);
+        console.log(`${this.nome} cadastrou o curso: ${novoCurso.descricao}`);
+        return novoCurso;
     }
 
-    editarCurso(): void {
-        console.log(`${this.nome} está editando um curso.`);
+    // O professor pode adicionar vídeos ao curso
+    adicionarVideo(curso: Curso, video: Video): void {
+        curso.cadastrarVideo(video);
+        console.log(`${this.nome} adicionou o vídeo "${video.titulo}" ao curso "${curso.descricao}".`);
+    }
+
+    // O professor pode adicionar materiais ao curso
+    adicionarMaterial(curso: Curso, material: Material): void {
+        curso.cadastrarMaterial(material);
+        console.log(`${this.nome} adicionou o material "${material.titulo}" ao curso "${curso.descricao}".`);
     }
 }

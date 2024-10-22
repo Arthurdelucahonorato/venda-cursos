@@ -4,7 +4,7 @@
   "main": "dist/src/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src2.0/index.ts"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",
