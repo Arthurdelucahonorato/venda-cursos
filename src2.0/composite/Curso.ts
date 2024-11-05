@@ -9,8 +9,8 @@ export class Curso implements CursoComponente {
         this.componentes.push(componente);
     }
 
-    exibir(): void {
-        console.log(`Curso: ${this.descricao}`);
-        this.componentes.forEach(componente => componente.exibir());
+    exibir(nivel: number = 0): void {  // Adicionando valor padrão para 'nivel'
+        console.log(`${' '.repeat(nivel * 2)}Curso: ${this.descricao}`);
+        this.componentes.forEach(componente => componente.exibir(nivel + 1)); // Passando o valor do nível incrementado
     }
 }

@@ -1,7 +1,7 @@
 {
   "name": "venda-cursos",
   "version": "1.0.0",
-  "main": "dist/src/index.js",
+  "main": "dist/src2.0/index.js",
   "scripts": {
     "build": "tsc",
     "start": "ts-node src2.0/index.ts"
