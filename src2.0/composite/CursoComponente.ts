@@ -1,4 +1,6 @@
 export interface CursoComponente {
-    exibir(): void;
-    adicionarComponente?(componente: CursoComponente): void; // Permitir a adição de subcomponentes
+    exibir(nivel?: number): void;
+    adicionarComponente?(componente: CursoComponente): void;
+    editarComponente?(indice: number, novoComponente: CursoComponente): void;
+    removerComponente?(indice: number): void;
 }
