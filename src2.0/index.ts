@@ -2,6 +2,7 @@ import { CursoBuilder } from './builder/CursoBuilder';
 import { Professor } from './Professor';
 import { Material } from './composite/Material';
 import { Video } from './composite/Video';
+import { Pagamento} from "./state/Pagamento";
 
 // Usando o Builder para construir um curso
 const cursoBuilder = new CursoBuilder('Curso de TypeScript', 'Aprenda TypeScript');
@@ -51,3 +52,22 @@ console.log('=-=-=-=-=-=-=')
 const professor = new Professor(1, 'John Doe', 'john@example.com', 'senha', 100, 'Informações do professor', 'Formação em TS', 'Assinatura Pro');
 professor.visualizarCurso(curso);
 
+console.log('=-=-=-=-=-=-=')
+
+// Fazendo pagamento
+const pedido = new Pagamento();
+
+console.log("Realizando pagamento:");
+pedido.pagar();
+
+pedido.liberar();
+
+console.log("Tentando cancelar o pedido pago:");
+pedido.cancelar();
+
+console.log("Tentar pagar novamente:");
+try {
+    pedido.pagar();
+} catch (e) {
+    console.error((e as Error).message);
+}
