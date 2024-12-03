@@ -33,7 +33,6 @@ export class Pagamento {
     this.estadoAtual.liberar();
   }
 
-// colocar contexto no caso o curso que foi pago cancelado ou liberado
   cancelar() {
     this.estadoAtual.cancelar();
   }
@@ -49,8 +48,7 @@ class AguardandoPagamento implements Estado {
   }
 
   liberar() {
-    console.log("Pagamento cancelado.");
-    this.pagamento.setEstado(new Liberado(this.pagamento));
+    console.log("Aguardando pagamento para liberação do curso.");
   }
 
   cancelar() {
@@ -88,7 +86,6 @@ class Liberado implements Estado {
 
   liberar() {
     console.log("Curso liberado para visualização! Bons estudos");
-    this.pagamento.setEstado(new Liberado(this.pagamento));
   }
 
   cancelar() {
@@ -106,8 +103,7 @@ class Cancelado implements Estado {
   }
 
   liberar() {
-    console.log("Pagamento foi cancelado, curso não está mais liberado");
-    this.pagamento.setEstado(new Liberado(this.pagamento));
+    console.log("Pagamento foi cancelado, curso está bloqueado!");
   }
 
   cancelar() {
