@@ -11,7 +11,7 @@ Usuários:
  - Professores: Podem cadastrar novos cursos, adicionar ou editar conteúdos, e visualizar os cursos cadastrados.
 
    
-Gestão de Pagamentos: <br> O pagamento de um curso passa por diversos estados, controlados pela classe Pagamento. O estado pode ser alterado dependendo das ações do usuário (pagar, liberar ou cancelar), e cada estado altera o comportamento do sistema conforme o contexto.
+Gestão de Pagamentos: <br> O pagamento de um curso passa por diversos estados, controlados pela classe `Pagamento`. O estado pode ser alterado dependendo das ações do usuário (pagar, liberar ou cancelar), e cada estado altera o comportamento do sistema conforme o contexto.
 
 
 ### __Benefícios e Objetivos:__ ###
