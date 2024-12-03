@@ -36,6 +36,10 @@ Funcionalidades
 Com o CursoBuilder, você pode criar cursos complexos com múltiplos componentes sem expor a lógica de construção, tornando o código mais modular e fácil de manter.
 
 
+![Imagem de exemplo](https://github.com/Arthurdelucahonorato/venda-cursos/blob/main/UML%20Builder.jpeg)
+
+
+
 ------------------------------------------
 
 
@@ -60,6 +64,9 @@ Funcionalidades:
   - Permite criar estruturas hierárquicas de componentes (ex.: cursos que possuem subcursos, vídeos e materiais). <br>
   - Oferece métodos uniformes para manipulação de componentes (adicionar, editar, remover e exibir). <br>
   - Suporte a operações recursivas para exibição e gerenciamento de todos os componentes.
+
+
+![Imagem de exemplo](https://github.com/Arthurdelucahonorato/venda-cursos/blob/main/UML%20Composite.jpeg)
 
 
   ---------------------------------------------
@@ -88,6 +95,9 @@ Estados:
 
    
 Essa abordagem permite que o comportamento do pagamento seja alterado dinamicamente, dependendo do estado atual, garantindo uma lógica mais organizada e flexível.
+
+
+![Imagem de exemplo](https://github.com/Arthurdelucahonorato/venda-cursos/blob/main/UML%20State.jpeg)
 
 
 
