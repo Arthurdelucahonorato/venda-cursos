@@ -6,6 +6,6 @@
     "outDir": "./dist",
     "rootDir": "./src"
   },
-  "include": ["src2.0/**/*"],
+  "include": ["src/**/*"],
   "exclude": ["node_modules"]
 }
